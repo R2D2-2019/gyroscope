@@ -1,8 +1,2 @@
-//
-// Created by BroBeans on 26-5-2019.
-//
+#pragma once
 
-#ifndef R2D2_GYROSCOPE_MODULE_HPP
-#define R2D2_GYROSCOPE_MODULE_HPP
-
-#endif //R2D2_GYROSCOPE_MODULE_HPP

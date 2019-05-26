@@ -1,8 +1,12 @@
-//
-// Created by BroBeans on 26-5-2019.
-//
+#include <i2c_bus.hpp>
 
-#ifndef R2D2_MPU9250_HPP
-#define R2D2_MPU9250_HPP
+#pragma once
 
-#endif //R2D2_MPU9250_HPP
+namespace r2d2::gyroscope {
+    class mpu9250 {
+
+
+    public:
+
+    };
+} // namespace r2d2::gyroscope
