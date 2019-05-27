@@ -1,0 +1,4 @@
+ToolSet: w64 6.0 (local)@C:\R2D2-build\programs\mingw32
+Options: 
+
+Options:

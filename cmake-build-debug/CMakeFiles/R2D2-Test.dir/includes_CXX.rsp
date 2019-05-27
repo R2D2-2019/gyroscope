@@ -1,0 +1,1 @@
+-IC:/R2D2-build/modules/gyroscope/./code/headers -IC:/R2D2-build/modules/gyroscope/../../libraries/hwlib/library -IC:/R2D2-build/modules/gyroscope/../../programs/bmptk/targets/cortex/atmel -IC:/R2D2-build/modules/gyroscope/../../libraries/Catch2/single_include/catch2 

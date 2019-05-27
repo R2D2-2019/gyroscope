@@ -1,0 +1,4 @@
+C:/R2D2-build/modules/gyroscope/cmake-build-debug/CMakeFiles/R2D2.dir
+C:/R2D2-build/modules/gyroscope/cmake-build-debug/CMakeFiles/R2D2-Test.dir
+C:/R2D2-build/modules/gyroscope/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/R2D2-build/modules/gyroscope/cmake-build-debug/CMakeFiles/rebuild_cache.dir
