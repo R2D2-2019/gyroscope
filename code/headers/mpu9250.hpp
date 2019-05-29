@@ -23,43 +23,41 @@ namespace r2d2::gyroscope {
         int16_t z;
     };
 
-/**
- * Class mpu9250_c is used to get the accel gyro and magneto values from the mpu9250
- */
+    /**
+     * Class mpu9250_c is used to get the accel gyro and magneto values from the
+     * mpu9250
+     */
     class mpu9250_c {
     public:
         /**
- * This is the constructor of mpu9250_c
- *
- * @param i2c_bus i2c bus is used to interact with the sensor.
- */
+         * This is the constructor of mpu9250_c
+         *
+         * @param i2c_bus i2c bus is used to interact with the sensor.
+         */
         mpu9250_c(r2d2::i2c::i2c_bus_c &i2c_bus);
 
         /**
-         * This function gets the gyro values of the mpu9250 these values represent the rotation since last pull.
+         * This function gets the gyro values of the mpu9250 these values
+         * represent the rotation since last pull.
          *
          * @return gyro_data_s
          */
         gyro_data_s get_gyro_xyz();
 
         /**
-         * This function gets the acceleration data from the mpu9250 this is the current force on the chip.
+         * This function gets the acceleration data from the mpu9250 this is the
+         * current force on the chip.
          *
          *
          * @return accel_data_s
          */
         accel_data_s get_accel_xyz();
 
-
     private:
-        uint8_t AK8963ReadByte(uint8_t reg);
-
-        void calibrate();
-
         /**
-        * I2C bus from R2D2
-        * */
+         * I2C bus from R2D2
+         * */
         r2d2::i2c::i2c_bus_c &i2c_bus;
         gyro_data_s gyro_data;
     };
-}
+} // namespace r2d2::gyroscope
