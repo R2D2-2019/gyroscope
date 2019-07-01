@@ -1,7 +1,7 @@
 #include <mpu9250.hpp>
 
 
-r2d2::gyroscope::mpu9250_c::mpu9250_c(r2d2::i2c::i2c_bus_c &i2c_bus) : i2c_bus(i2c_bus){
+r2d2::gyroscope::mpu9250_c::mpu9250_c(r2d2::i2c::i2c_bus_c &i2c_bus,base_comm_c &comm) : i2c_bus(i2c_bus), gyroscope_c(comm){
 
 
 }

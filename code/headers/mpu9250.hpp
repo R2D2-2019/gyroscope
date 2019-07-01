@@ -1,5 +1,8 @@
+#pragma once
+#include <base_module.hpp>
 #include <hwlib.hpp>
 #include <i2c_bus.hpp>
+#include <gyroscope.hpp>
 #include <mpu9250_adress_map.hpp>
 
 #pragma once
@@ -26,6 +29,7 @@ namespace r2d2::gyroscope {
     /**
      * Class mpu9250_c is used to get the accel gyro and magneto values from the
      * mpu9250
+     * comm: the interal communication bus.
      */
     class mpu9250_c {
     public:
@@ -34,7 +38,7 @@ namespace r2d2::gyroscope {
          *
          * @param i2c_bus i2c bus is used to interact with the sensor.
          */
-        mpu9250_c(r2d2::i2c::i2c_bus_c &i2c_bus);
+        mpu9250_c(r2d2::i2c::i2c_bus_c &i2c_bus, base_comm_c &comm);
 
         /**
          * This function gets the gyro values of the mpu9250 these values
