@@ -48,55 +48,55 @@ r2d2::gyroscope::accel_data_s r2d2::gyroscope::mpu9250_c::get_accel_xyz(){
     return temp;
 }
 
-float r2d2::gyroscope::mpu9250_c::get_mag_x_ut(){
+float r2d2::gyroscope::mpu9250_c::getMag_X_uT(){
     return _hx;
 }
 
 /* , uT */
-float r2d2::gyroscope::mpu9250_c::get_mag_y_ut() {
+float r2d2::gyroscope::mpu9250_c::getMag_Y_uT() {
   return _hy;
 }
 
 /* returns the magnetometer measurement in the z direction, uT */
-float r2d2::gyroscope::mpu9250_c::get_mag_z_ut() {
+float r2d2::gyroscope::mpu9250_c::getMag_Z_uT() {
   return _hz;
 }
 
-float r2d2::gyroscope::mpu9250_c::getMagBiasX_uT() {
+float r2d2::gyroscope::mpu9250_c::get_MagBias_X_uT() {
   return _hxb;
 }
 
-float r2d2::gyroscope::mpu9250_c::getMagScaleFactorX() {
+float r2d2::gyroscope::mpu9250_c::get_MagScaleFactor_X() {
   return _hxs;
 }
 
-float r2d2::gyroscope::mpu9250_c::getMagBiasY_uT() {
+float r2d2::gyroscope::mpu9250_c::get_MagBias_Y_uT() {
   return _hyb;
 }
 
-float r2d2::gyroscope::mpu9250_c::getMagScaleFactorY() {
+float r2d2::gyroscope::mpu9250_c::get_MagScaleFactor_Y() {
   return _hys;
 }
 
-float r2d2::gyroscope::mpu9250_c::getMagBiasZ_uT() {
+float r2d2::gyroscope::mpu9250_c::get_MagBias_Z_uT() {
   return _hzb;
 }
 
-float r2d2::gyroscope::mpu9250_c::getMagScaleFactorZ() {
+float r2d2::gyroscope::mpu9250_c::get_MagScaleFactor_Z() {
   return _hzs;
 }
 
-void  r2d2::gyroscope::mpu9250_c::setMagCalX(float bias,float scaleFactor) {
+void  r2d2::gyroscope::mpu9250_c::set_MagCal_X(float bias,float scaleFactor) {
   _hxb = bias;
   _hxs = scaleFactor;
 }
 
-void  r2d2::gyroscope::mpu9250_c::setMagCalY(float bias,float scaleFactor) {
+void  r2d2::gyroscope::mpu9250_c::set_MagCal_Y(float bias,float scaleFactor) {
   _hyb = bias;
   _hys = scaleFactor;
 }
 
-void  r2d2::gyroscope::mpu9250_c::setMagCalZ(float bias,float scaleFactor) {
+void  r2d2::gyroscope::mpu9250_c::set_MagCal_Z(float bias,float scaleFactor) {
   _hzb = bias;
   _hzs = scaleFactor;
 }
