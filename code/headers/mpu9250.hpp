@@ -26,6 +26,30 @@ namespace r2d2::gyroscope {
         int16_t z;
     };
 
+    float _magScaleX, _magScaleY, _magScaleZ;
+        // magnetometer bias and scale factor estimation
+    uint16_t _maxCounts = 1000;
+    float _deltaThresh = 0.3f;
+    uint8_t _coeff = 8;
+    uint16_t _counter;
+    float _framedelta, _delta;
+    float _hxfilt, _hyfilt, _hzfilt;
+    float _hxmax, _hymax, _hzmax;
+    float _hxmin, _hymin, _hzmin;
+    float _hxb, _hyb, _hzb;
+    float _hxs = 1.0f;
+    float _hys = 1.0f;
+    float _hzs = 1.0f;
+    float _avgs;
+    // transformation matrix
+    /* transform the accel and gyro axes to match the magnetometer axes */
+    const int16_t tX[3] = {0,  1,  0}; 
+    const int16_t tY[3] = {1,  0,  0};
+    const int16_t tZ[3] = {0,  0, -1};
+    // constants
+    const float G = 9.807f;
+    const float _d2r = 3.14159265359f/180.0f;
+
     /**
      * Class mpu9250_c is used to get the accel gyro and magneto values from the
      * mpu9250
@@ -122,29 +146,7 @@ namespace r2d2::gyroscope {
         void set_MagCal_Z(float bias,float scaleFactor);
 
     protected:
-        float _magScaleX, _magScaleY, _magScaleZ;
-            // magnetometer bias and scale factor estimation
-        uint16_t _maxCounts = 1000;
-        float _deltaThresh = 0.3f;
-        uint8_t _coeff = 8;
-        uint16_t _counter;
-        float _framedelta, _delta;
-        float _hxfilt, _hyfilt, _hzfilt;
-        float _hxmax, _hymax, _hzmax;
-        float _hxmin, _hymin, _hzmin;
-        float _hxb, _hyb, _hzb;
-        float _hxs = 1.0f;
-        float _hys = 1.0f;
-        float _hzs = 1.0f;
-        float _avgs;
-        // transformation matrix
-        /* transform the accel and gyro axes to match the magnetometer axes */
-        const int16_t tX[3] = {0,  1,  0}; 
-        const int16_t tY[3] = {1,  0,  0};
-        const int16_t tZ[3] = {0,  0, -1};
-        // constants
-        const float G = 9.807f;
-        const float _d2r = 3.14159265359f/180.0f;
+
 
     private:
         /**
