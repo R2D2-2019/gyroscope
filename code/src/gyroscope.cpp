@@ -13,7 +13,7 @@ namespace r2d2::gyroscope{
             // process the frame
 
             // dont handle the request
-            if(frame.request){
+            if (frame.request){
                 continue;
             }
 
@@ -36,5 +36,4 @@ namespace r2d2::gyroscope{
             }
         }
     }
-
 }
